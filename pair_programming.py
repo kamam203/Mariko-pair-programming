@@ -1,9 +1,11 @@
 def convert_to_meters(feet, inches):
     """
     Takes two values (feet and inches) and converts them to meters.
-    1 foot = 0.3048 meters, 1 inch = 0.0254 meters.
+    Formula: Total inches * 0.0254
     """
-    meters = (feet * 0.3048) + (inches * 0.0254)
+    total_inches = (feet * 12) + inches
+    meters = total_inches * 0.0254
     return meters
 
-print(f"5 feet 10 inches is {convert_to_meters(5, 10)} meters")
+# Example: 5 feet 10 inches
+print(f"5'10'' is {convert_to_meters(5, 10)} meters")
